@@ -1,0 +1,23 @@
+{
+  "name": "AttendEase",
+  "short_name": "AttendEase",
+  "description": "College attendance, timetable and grades tracker",
+  "start_url": "/attendease/",
+  "scope": "/attendease/",
+  "display": "standalone",
+  "background_color": "#111318",
+  "theme_color": "#111318",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/attendease/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/attendease/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
