@@ -1,8 +1,8 @@
 const CACHE = "attendease-v1"
 
 const ASSETS = [
-  "/attendease/",
-  "/attendease/index.html",
+  "/AttendEase/",
+  "/AttendEase/index.html",
 ]
 
 self.addEventListener("install", (e) => {
