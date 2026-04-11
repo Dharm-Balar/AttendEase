@@ -1,5 +1,5 @@
-const CACHE = "attendease-v3"
-// do v5 next time iiimmmmpppppoorrrttaaannnttt
+const CACHE = "attendease-v5"
+
 const ASSETS = [
   "/AttendEase/",
   "/AttendEase/index.html",
