@@ -1,4 +1,4 @@
-const CACHE = "attendease-v7"
+const CACHE = "attendease-v8"
 
 const ASSETS = [
   "/AttendEase/",
@@ -23,5 +23,13 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   e.respondWith(
     caches.match(e.request).then((cached) => cached || fetch(e.request))
+  )
+})
+
+// open app when notification is tapped
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close()
+  e.waitUntil(
+    clients.openWindow("/AttendEase/")
   )
 })
