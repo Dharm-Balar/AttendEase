@@ -1,4 +1,4 @@
-const CACHE = "attendease-v2"
+const CACHE = "attendease-v3"
 
 const ASSETS = [
   "/AttendEase/",
