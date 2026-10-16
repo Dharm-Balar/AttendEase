@@ -288,8 +288,10 @@ function Attendance() {
     (sum, s) => sum + (attendance[s]?.total || 0),
     0,
   );
-  const overall =
-    totalClasses === 0 ? 0 : Math.round((totalPresent / totalClasses) * 100);
+  // const overall =
+  //   totalClasses === 0 ? 0 : Math.round((totalPresent / totalClasses) * 100);
+   const overall =
+    totalClasses === 0 ? 0 : (totalPresent / totalClasses) * 100;
 
   if (subjects.length === 0) {
     return (
