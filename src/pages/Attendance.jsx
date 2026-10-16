@@ -12,7 +12,7 @@ function getColor(percent) {
 // summary card per subject showing full semester %
 function SubjectSummary({ name, data }) {
   const percent =
-    data.total === 0 ? 0.0 : ((data.present / data.total) * 100).toFixed(2);
+    data.total === 0 ? 0 : (data.present / data.total) * 100;
   const color = getColor(percent);
 
   return (
@@ -20,7 +20,7 @@ function SubjectSummary({ name, data }) {
       <div className="flex justify-between items-center mb-2">
         <p className="text-sm font-medium text-gray-100">{name}</p>
         <span className={`text-sm font-semibold ${color.text}`}>
-          {percent}%
+          {percent.toFixed(2)}%
         </span>
       </div>
       <div className="h-1.5 bg-[#2a2a35] rounded-full mb-1">
@@ -291,8 +291,15 @@ function Attendance() {
   // const overall =
   //   totalClasses === 0 ? 0 : Math.round((totalPresent / totalClasses) * 100);
    const overall =
-    totalClasses === 0 ? 0.0 : ((totalPresent / totalClasses) * 100).toFixed(2);
+    totalClasses === 0 ? 0 : (totalPresent / totalClasses) * 100;
 
+console.log({
+  totalPresent,
+  totalClasses,
+  overall,
+  formatted: overall.toFixed(2)
+});
+  
   if (subjects.length === 0) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center gap-3">
@@ -316,7 +323,7 @@ function Attendance() {
           className={`text-xs px-3 py-1 rounded-full font-medium
           ${overall >= 75 ? "bg-[#2a2040] text-violet-300" : "bg-[#2e1a0e] text-orange-400"}`}
         >
-          Overall {overall}%
+          Overall {overall.toFixed(2)}%
         </span>
       </div>
 
