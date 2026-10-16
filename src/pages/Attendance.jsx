@@ -323,7 +323,7 @@ console.log({
           className={`text-xs px-3 py-1 rounded-full font-medium
           ${overall >= 75 ? "bg-[#2a2040] text-violet-300" : "bg-[#2e1a0e] text-orange-400"}`}
         >
-          Overall {overall.toFixed(2)}%
+          Overall {overall}%
         </span>
       </div>
 
