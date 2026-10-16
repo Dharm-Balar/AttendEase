@@ -12,7 +12,7 @@ function getColor(percent) {
 // summary card per subject showing full semester %
 function SubjectSummary({ name, data }) {
   const percent =
-    data.total === 0 ? 0 : ((data.present / data.total) * 100).toFixed(2);
+    data.total === 0 ? 0.0 : ((data.present / data.total) * 100).toFixed(2);
   const color = getColor(percent);
 
   return (
@@ -291,7 +291,7 @@ function Attendance() {
   // const overall =
   //   totalClasses === 0 ? 0 : Math.round((totalPresent / totalClasses) * 100);
    const overall =
-    totalClasses === 0 ? 0 : ((totalPresent / totalClasses) * 100).toFixed(2);
+    totalClasses === 0 ? 0.0 : ((totalPresent / totalClasses) * 100).toFixed(2);
 
   if (subjects.length === 0) {
     return (
